@@ -52,7 +52,8 @@ namespace FourtyControlesDemo
             int idx = pTractor.SelectedIndex; //ausgewählter Index der Liste
             if(idx != -1)
             {
-                string selectedTractor = pTractor.Items[idx]; 
+                string selectedTractor = pTractor.Items[idx];
+                lTractor.Text = $"Auswahl:{selectedTractor}"; 
             }
         }
     }
