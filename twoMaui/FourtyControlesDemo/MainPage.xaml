@@ -37,16 +37,25 @@
                     <Label Text="TimePicker:"></Label>
                     <TimePicker TimeSelected="TimePicker_TimeSelected"></TimePicker>
                     <Label x:Name="lWorkingStart"></Label>
-                    
-                    
-                    
                 </HorizontalStackLayout>
             </Border>
             <Border>
                 <HorizontalStackLayout>
                     <Label Text="DatePicker"></Label>
-                    <DatePicker y:Name="dpMaintenance" DateSelected="DatePicker_DateSelected" MaximumDate="2026-12-31" MinimumDate="2026-01-01"></DatePicker>
+                    <DatePicker x:Name="dpMaintenance" DateSelected="DatePicker_DateSelected" MaximumDate="2026-12-31" MinimumDate="2026-01-01"></DatePicker>
                     <Label x:Name="lMaintenance"></Label>
+                </HorizontalStackLayout>
+            </Border>
+
+            <Border>
+                <HorizontalStackLayout>
+                    <Picker x:Name="pTractor" Title="Bitte wähle einen Tractor" SelectedIndexChanged="pTractor_SelectedIndexChanged">
+                        <Picker.Items>
+                            <x:String>John Deere</x:String>
+                            <x:String>John Deere</x:String>
+                            <x:String>John Deere</x:String>
+                        </Picker.Items>
+                    </Picker>
                 </HorizontalStackLayout>
             </Border>
         </VerticalStackLayout>

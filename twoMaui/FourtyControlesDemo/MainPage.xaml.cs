@@ -1,4 +1,4 @@
-﻿using Java.Nio.Channels;
+﻿
 
 namespace FourtyControlesDemo
 {
@@ -45,6 +45,15 @@ namespace FourtyControlesDemo
         private void DatePicker_DateSelected(object sender, DateChangedEventArgs e)
         {
             lMaintenance.Text = e.NewDate.ToLongDateString(); 
+        }
+
+        private void pTractor_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int idx = pTractor.SelectedIndex; //ausgewählter Index der Liste
+            if(idx != -1)
+            {
+                string selectedTractor = pTractor.Items[idx]; 
+            }
         }
     }
 }
