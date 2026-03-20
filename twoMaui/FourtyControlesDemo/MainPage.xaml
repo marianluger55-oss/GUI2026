@@ -9,7 +9,14 @@
             Spacing="25">
 
             
-            <Image Source="b.jpg" HeightRequest="1500"></Image>
+            <Image Source="b.jpg" HeightRequest="1000"></Image>
+            <Border>
+                <HorizontalStackLayout HorizontalOptions="Center">
+                    <Switch IsToggled="True" Toggled="Switch_Toggled"></Switch>
+                    <Label x:Name=" lSwitch"></Label>
+                </HorizontalStackLayout>
+            </Border>
+            
         </VerticalStackLayout>
     </ScrollView>
 
