@@ -1,4 +1,6 @@
-﻿namespace FourtyControlesDemo
+﻿using Java.Nio.Channels;
+
+namespace FourtyControlesDemo
 {
     public partial class MainPage : ContentPage
     {
@@ -7,7 +9,8 @@
         public MainPage()
         {
             InitializeComponent();
-            lSwitch.Text = "eingeschaltet"; 
+            lSwitch.Text = "eingeschaltet";
+            dpMaintenance.MinimumDate = new DateTime(2024, 1, 1); 
         }
 
         private void Switch_Toggled(object sender, ToggledEventArgs e)
@@ -19,6 +22,29 @@
             {
                 lSwitch.Text = "ausgeschaltet"; 
             }
+        }
+
+        private void Stepper_ValueChanged(object sender, ValueChangedEventArgs e)
+        {
+            if (lFuel != null)
+            {
+                lFuel.Text = $"Kraftstoffmenge: {e.NewValue}";
+            }
+        }
+
+        private void Slider_ValueChanged(object sender, ValueChangedEventArgs e)
+        {
+            lVolume.Text = $"Lautstärke: {(int)e.NewValue}"; 
+        }
+
+        private void TimePicker_TimeSelected(object sender, TimeChangedEventArgs e)
+        {
+            lWorkingStart.Text = e.NewTime.ToString(); 
+        }
+
+        private void DatePicker_DateSelected(object sender, DateChangedEventArgs e)
+        {
+            lMaintenance.Text = e.NewDate.ToLongDateString(); 
         }
     }
 }

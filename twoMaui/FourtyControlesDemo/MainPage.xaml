@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="FourtyControlesDemo.MainPage">
+             x:Class="FourtyControlesDemo.MainPage" BackgroundColor="#FFFFFF" Background="#FFFFFF">
 
     <ScrollView>
         <VerticalStackLayout
@@ -17,7 +17,39 @@
                 </HorizontalStackLayout>
             </Border>
             
+            <Border>
+                <HorizontalStackLayout>
+                    <Label Text="Stepper: "></Label>
+                    <Stepper Value="10" ValueChanged="Stepper_ValueChanged" Maximum="100"></Stepper>
+                    <Label x:Name="lFuel"></Label>
+                </HorizontalStackLayout>
+            </Border>
+
+            <Border>
+                <HorizontalStackLayout>
+                    <Label Text="Slider"></Label>
+                    <Slider WidthRequest="200" ValueChanged="Slider_ValueChanged" Maximum="100"></Slider>
+                    <Label x:Name="lVolume"></Label>
+                </HorizontalStackLayout>
+            </Border>
+            <Border>
+                <HorizontalStackLayout>
+                    <Label Text="TimePicker:"></Label>
+                    <TimePicker TimeSelected="TimePicker_TimeSelected"></TimePicker>
+                    <Label x:Name="lWorkingStart"></Label>
+                    
+                    
+                    
+                </HorizontalStackLayout>
+            </Border>
+            <Border>
+                <HorizontalStackLayout>
+                    <Label Text="DatePicker"></Label>
+                    <DatePicker y:Name="dpMaintenance" DateSelected="DatePicker_DateSelected" MaximumDate="2026-12-31" MinimumDate="2026-01-01"></DatePicker>
+                    <Label x:Name="lMaintenance"></Label>
+                </HorizontalStackLayout>
+            </Border>
         </VerticalStackLayout>
     </ScrollView>
 
-</ContentPage>
+</ContentPage>    
