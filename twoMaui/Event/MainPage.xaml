@@ -4,7 +4,29 @@
              x:Class="Event.MainPage">
 
     <ScrollView>
-        <Label></Label>
-    </ScrollView>
+        <VerticalStackLayout
+            Padding="30,0" 
+            Spacing="25">
 
+
+            <VerticalStackLayout Spacing="20">
+                <Label Text="Bitte den Titel des Events eingeben:"></Label>
+                <Entry></Entry>
+                <Label Text="Bitte ein Datum auswählen"></Label>
+                <DatePicker></DatePicker>
+                <TimePicker></TimePicker>
+                <Label Text="Bitte Gäste festlegen:"></Label>
+                <Slider></Slider>
+                <Label Text="Catering erwünscht:"></Label>
+                <Switch IsToggled="False" Toggled="Switch_Toggled"></Switch>
+                <Label x:Name=" lSwitch"></Label>
+                <Label Text="Anzahl der Tische:"></Label>
+                <Stepper Value="1" ValueChanged="Stepper_ValueChanged" Maximum="100"></Stepper>
+                <Label Text="Veranstalltungsort:"></Label>
+                <RadioButton></RadioButton>
+                <RadioButton></RadioButton>
+                <RadioButton></RadioButton>
+            </VerticalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>
