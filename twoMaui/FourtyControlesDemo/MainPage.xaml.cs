@@ -56,5 +56,35 @@ namespace FourtyControlesDemo
                 lTractor.Text = $"Auswahl:{selectedTractor}"; 
             }
         }
+
+        private void RadioButton_CheckedChanged(object sender, CheckedChangedEventArgs e)
+        {
+            // 1Eventhandler für 3 Controls
+
+            if(sender is RadioButton radioButton)
+            {
+                // wenn der Sender ein Radiobutton ist, dann wird er in der Variable 
+                // radioButton gespeichert 
+                if (radioButton.IsChecked)
+                {
+                    lRadio.Text = $"Auswahl: {radioButton.Content}"; 
+                }
+            }
+        }
+
+        private void CheckBox_CheckedChanged(object sender, CheckedChangedEventArgs e)
+        {
+            if(sender is CheckBox checkBox)
+            {
+                if (checkBox.IsChecked)
+                {
+                    lAdvertisment.Text = "Ja, viel Werbung"; 
+                }
+                else
+                {
+                    lAdvertisment.Text = "KEINE Werbung"; 
+                }
+            }
+        }
     }
 }

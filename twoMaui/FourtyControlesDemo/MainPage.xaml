@@ -9,7 +9,7 @@
             Spacing="25">
 
             
-            <Image Source="b.jpg" HeightRequest="1000"></Image>
+            <Image Source="b.jpg" HeightRequest="500"></Image>
             <Border>
                 <HorizontalStackLayout HorizontalOptions="Center">
                     <Switch IsToggled="True" Toggled="Switch_Toggled"></Switch>
@@ -57,6 +57,31 @@
                         </Picker.Items>
                     </Picker>
                     <Label x:Name="lTractor"></Label>
+                </HorizontalStackLayout>
+            </Border>
+
+            <Border>
+                <VerticalStackLayout>
+                    <RadioButton Value="1" Content="City" CheckedChanged="RadioButton_CheckedChanged"></RadioButton>
+                    <RadioButton Value="1" Content="Country" CheckedChanged="RadioButton_CheckedChanged"></RadioButton>
+                    <RadioButton Value="1" Content="Sea" CheckedChanged="RadioButton_CheckedChanged"></RadioButton>
+                    <Label x:Name="lRadio"></Label> 
+                </VerticalStackLayout>
+            </Border>
+            <Border>
+                <HorizontalStackLayout>
+                    <CheckBox IsChecked="False" CheckedChanged="CheckBox_CheckedChanged"></CheckBox>
+                    <Label x:Name="lAdvertisment" Padding="20"></Label>
+                </HorizontalStackLayout>
+            </Border>
+
+            <Border>
+                <HorizontalStackLayout>
+                    <Editor Text="
+                            Zeile 1
+                            Zeile 2
+                            Zeile 3
+                            "></Editor>
                 </HorizontalStackLayout>
             </Border>
         </VerticalStackLayout>
