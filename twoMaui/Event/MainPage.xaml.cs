@@ -11,7 +11,10 @@
 
         private void Stepper_ValueChanged(object sender, ValueChangedEventArgs e)
         {
-
+            if (lFuel != null)
+            {
+                lFuel.Text = $"Anzahl der Tische: {e.NewValue}";
+            }
         }
 
         private void Switch_Toggled(object sender, ToggledEventArgs e)
@@ -24,6 +27,11 @@
             {
                 lSwitch.Text = "Kein Catering";
             }
+        }
+
+        private void Slider_ValueChanged(object sender, ValueChangedEventArgs e)
+        {
+            lPersonen.Text = $"Anzahl der Personen: {(int)e.NewValue}";
         }
     }
 }

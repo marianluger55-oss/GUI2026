@@ -14,18 +14,21 @@
                 <Entry></Entry>
                 <Label Text="Bitte ein Datum auswählen"></Label>
                 <DatePicker></DatePicker>
+                <Label Text="Bitte Uhrzeit auswählen"></Label>
                 <TimePicker></TimePicker>
                 <Label Text="Bitte Gäste festlegen:"></Label>
-                <Slider></Slider>
+                <Slider ValueChanged="Slider_ValueChanged" Maximum="100"></Slider>
+                <Label x:Name="lPersonen"></Label>
                 <Label Text="Catering erwünscht:"></Label>
                 <Switch IsToggled="False" Toggled="Switch_Toggled"></Switch>
                 <Label x:Name=" lSwitch"></Label>
                 <Label Text="Anzahl der Tische:"></Label>
-                <Stepper Value="1" ValueChanged="Stepper_ValueChanged" Maximum="100"></Stepper>
+                <Stepper Value="1" ValueChanged="Stepper_ValueChanged" Maximum="100" Minimum="1"></Stepper>
+                <Label x:Name="lFuel"></Label>
                 <Label Text="Veranstalltungsort:"></Label>
-                <RadioButton></RadioButton>
-                <RadioButton></RadioButton>
-                <RadioButton></RadioButton>
+                <RadioButton Value="1" Content="Wohnzimmer"></RadioButton>
+                <RadioButton Value="1" Content="Keller"></RadioButton>
+                <RadioButton Value="1" Content="Garten"></RadioButton>
             </VerticalStackLayout>
         </VerticalStackLayout>
     </ScrollView>
