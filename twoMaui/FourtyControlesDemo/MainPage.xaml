@@ -56,7 +56,7 @@
                             <x:String>John Deere</x:String>
                         </Picker.Items>
                     </Picker>
-                    <Labelx:Name="lTractor"></Labelx:Name>
+                    <Label x:Name="lTractor"></Label>
                 </HorizontalStackLayout>
             </Border>
         </VerticalStackLayout>
