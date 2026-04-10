@@ -6,9 +6,25 @@
     xmlns:local="clr-namespace:FourtyTwoFlyout"
     Title="FourtyTwoFlyout">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+    <FlyoutItem Title="Home">
+        <ShellContent>
+            <ContentPage>
+                <Label Text="Welcome to Home"></Label>
+            </ContentPage>
+        </ShellContent>
+    </FlyoutItem>
+    <FlyoutItem Title="Einstellungen">
+        <ShellContent>
+            <ContentPage>
+                <Label Text="Welcome to Einstellungen"></Label>
+            </ContentPage>
+        </ShellContent>
+    </FlyoutItem>
+    <FlyoutItem Title="Main">
+        <ShellContent ContentTemplate="{DataTemplate local:MainPage}"></ShellContent>
+    </FlyoutItem>
+    <FlyoutItem Title="Detail">
+        <ShellContent ContentTemplate="{DataTemplate local:TitlePage}"></ShellContent>
+    </FlyoutItem>
 
 </Shell>
