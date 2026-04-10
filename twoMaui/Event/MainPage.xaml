@@ -11,11 +11,11 @@
 
             <VerticalStackLayout Spacing="20">
                 <Label Text="Bitte den Titel des Events eingeben:"></Label>
-                <Entry></Entry>
+                <Entry x:Name="lTitle"></Entry>
                 <Label Text="Bitte ein Datum auswählen"></Label>
-                <DatePicker></DatePicker>
+                <DatePicker x:Name="lDate"></DatePicker>
                 <Label Text="Bitte Uhrzeit auswählen"></Label>
-                <TimePicker></TimePicker>
+                <TimePicker x:Name="lTime"></TimePicker>
                 <Label Text="Bitte Gäste festlegen:"></Label>
                 <Slider ValueChanged="Slider_ValueChanged" Maximum="100"></Slider>
                 <Label x:Name="lPersonen"></Label>
@@ -26,9 +26,15 @@
                 <Stepper Value="1" ValueChanged="Stepper_ValueChanged" Maximum="100" Minimum="1"></Stepper>
                 <Label x:Name="lFuel"></Label>
                 <Label Text="Veranstalltungsort:"></Label>
-                <RadioButton Value="1" Content="Wohnzimmer"></RadioButton>
-                <RadioButton Value="1" Content="Keller"></RadioButton>
-                <RadioButton Value="1" Content="Garten"></RadioButton>
+                <RadioButton Value="1" Content="Wohnzimmer" x:Name="lWohnzimmer"></RadioButton>
+                <Image Source="moderne-ideen-fr-wohnzimmer-mit-holz.jpg"></Image>
+                <RadioButton Value="1" Content="Keller" x:Name="lKeller"></RadioButton>
+                <Image Source="partyraum-charlottenburg-partykeller.jpg"></Image>
+                <RadioButton Value="1" Content="Garten" x:Name="lGarten"></RadioButton>
+                <Image Source="poll-bb-2.jpg"></Image>
+                <Button Text="Zusammenfassung anzeigen"
+                Clicked="Button_Clicked" />
+                <Label x:Name="lSummary" />
             </VerticalStackLayout>
         </VerticalStackLayout>
     </ScrollView>

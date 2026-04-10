@@ -2,7 +2,7 @@
 {
     public partial class MainPage : ContentPage
     {
-        int count = 0;
+        private string selectedLocation = "(nicht ausgewählt)";
 
         public MainPage()
         {
@@ -32,6 +32,29 @@
         private void Slider_ValueChanged(object sender, ValueChangedEventArgs e)
         {
             lPersonen.Text = $"Anzahl der Personen: {(int)e.NewValue}";
+        }
+
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            string title = lTitle.Text ?? "Kein Titel";
+            string time = lTime.Text ?? "Keine Uhrzeit gewählt";
+            string date = lDate.Text ?? "Kein Datum gewählt";
+            string guests = lPersonen.Text ?? "Keine Gästeanzahl";
+            string location = lLocation.Text ?? "Keine Location";
+            string catering = lSwitch.Text ?? "Kein Catering gewählt";
+            string tables = lFuel
+                .Text ?? "Keine Tische";
+
+            lSummary.Text =
+                $"--- Geburtstagsfeier ---\n" +
+                $"Titel: {title}\n" +
+                $"{date}\n" +
+                $"{time}\n" +
+                $"{guests}\n" +
+                $"{location}\n" +
+                $"{catering}\n" +
+                $"{tables}";
         }
     }
 }

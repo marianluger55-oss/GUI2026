@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FourtyControlesDemo", "Four
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Event", "Event\Event.csproj", "{5644C61E-B6C6-4AF4-AD15-C81EC75965E4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FourtyOneTabNavigation", "FourtyOneTabNavigation\FourtyOneTabNavigation.csproj", "{5D60D1D7-724C-40C2-B993-F44DFAFD211A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{5644C61E-B6C6-4AF4-AD15-C81EC75965E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5644C61E-B6C6-4AF4-AD15-C81EC75965E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5644C61E-B6C6-4AF4-AD15-C81EC75965E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D60D1D7-724C-40C2-B993-F44DFAFD211A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D60D1D7-724C-40C2-B993-F44DFAFD211A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D60D1D7-724C-40C2-B993-F44DFAFD211A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D60D1D7-724C-40C2-B993-F44DFAFD211A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
