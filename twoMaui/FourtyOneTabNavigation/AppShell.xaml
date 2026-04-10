@@ -6,9 +6,25 @@
     xmlns:local="clr-namespace:FourtyOneTabNavigation"
     Title="FourtyOneTabNavigation">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
-
+    <TabBar>
+        <Tab Title="Seite1" Icon="applelogo.png">
+            <ShellContent Title="Tab1">
+                <ContentPage>
+                    <Label Text="Welcome to Homepage"></Label>
+                </ContentPage>
+            </ShellContent>
+        </Tab>
+        <Tab Title="Seite2" Icon="shield.png">
+            <ShellContent Title="Tab2">
+                <ContentPage>
+                    <Label Text="Welcome to Tab2"></Label>
+                </ContentPage>
+            </ShellContent>
+        </Tab>
+        <Tab Title="Main">
+            <ShellContent ContentTemplate="{DataTemplate local:MainPage}">
+                
+            </ShellContent>
+        </Tab>
+    </TabBar>
 </Shell>
