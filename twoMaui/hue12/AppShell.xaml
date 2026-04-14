@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="hue12.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:hue12"
+    Title="hue12">
+
+    <TabBar>
+        <Tab Title="Seite1">
+            <ShellContent Title="Erster Tab">
+                <ContentPage>
+                    <VerticalStackLayout>
+                        <Label Text="Pick a Date"></Label>
+                        <DatePicker x:Name="Date"></DatePicker>
+                        <Button Text="Speichern" Clicked="Button_Clicked"></Button>
+                        <Label x:Name="lsaved"></Label>
+                        
+                    </VerticalStackLayout>
+                </ContentPage>
+            </ShellContent>
+        </Tab>
+        <Tab Title="Seite2">
+            <ShellContent Title="Zweiter Tab">
+                <ContentPage>
+                    <VerticalStackLayout>
+                        <HorizontalStackLayout>
+                            <Button x:Name="btnUpdate" Text="Aktualisieren" Clicked="UpdateButton_Clicked"></Button>
+                            <Button x:Name="btnReset" Text="Reset" Clicked="ResetButton_Clicked"></Button>
+                        </HorizontalStackLayout>
+                        <Editor x:Name="SavedEditor" IsReadOnly="True" AutoSize="TextChanges"></Editor>
+                    </VerticalStackLayout>
+                </ContentPage>
+            </ShellContent>
+        </Tab>
+    </TabBar>
+
+</Shell>

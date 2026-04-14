@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FourtyOneTabNavigation", "F
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FourtyTwoFlyout", "FourtyTwoFlyout\FourtyTwoFlyout.csproj", "{944B64B6-D58D-4EBC-B0CC-132748670798}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hue12", "hue12\hue12.csproj", "{0B64FBF6-DEFC-476D-987C-7E2152027331}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,7 @@ Global
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{D8AE4BEC-F831-48AB-8C4A-6F34151DDF7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D8AE4BEC-F831-48AB-8C4A-6F34151DDF7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8AE4BEC-F831-48AB-8C4A-6F34151DDF7F}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 		{D8AE4BEC-F831-48AB-8C4A-6F34151DDF7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D8AE4BEC-F831-48AB-8C4A-6F34151DDF7F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E10153D8-158A-4B7C-BF18-D9A1BA00E9F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -40,6 +43,11 @@ Global
 		{944B64B6-D58D-4EBC-B0CC-132748670798}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{944B64B6-D58D-4EBC-B0CC-132748670798}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{944B64B6-D58D-4EBC-B0CC-132748670798}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B64FBF6-DEFC-476D-987C-7E2152027331}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B64FBF6-DEFC-476D-987C-7E2152027331}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B64FBF6-DEFC-476D-987C-7E2152027331}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{0B64FBF6-DEFC-476D-987C-7E2152027331}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B64FBF6-DEFC-476D-987C-7E2152027331}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
