@@ -15,7 +15,7 @@
                         <DatePicker x:Name="Date"></DatePicker>
                         <Button Text="Speichern" Clicked="Button_Clicked"></Button>
                         <Label x:Name="lsaved"></Label>
-                        
+
                     </VerticalStackLayout>
                 </ContentPage>
             </ShellContent>
@@ -34,5 +34,4 @@
             </ShellContent>
         </Tab>
     </TabBar>
-
 </Shell>
