@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FourtyFourGridLayout.MainPage">
+
+    <ScrollView>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200" />
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Hallo" Grid.Row="1" Grid.Column="1"></Label>
+            <Border Grid.Row="0" Grid.Column="1">
+                <VerticalStackLayout>
+                    <Label Text="Lorem ipsum..."></Label>
+                    <Label Text="Und noch etwas"></Label>
+                    <Button Text="Click me!"></Button>
+                </VerticalStackLayout>
+            </Border>
+            <Border Grid.Row="1" Grid.Column="0">
+                <VerticalStackLayout>
+                <Button  Text="Button"></Button>
+                </VerticalStackLayout>
+            </Border>
+        </Grid>
+    </ScrollView>
+
+</ContentPage>

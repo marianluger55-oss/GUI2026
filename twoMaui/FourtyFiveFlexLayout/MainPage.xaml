@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FourtyFiveFlexLayout.MainPage">
+
+    <FlexLayout Direction="Row"
+                Wrap="Wrap"
+                AlignItems="Center">
+        <Border BackgroundColor="Red" WidthRequest="100" HeightRequest="120"></Border>
+        <Border BackgroundColor="Green" WidthRequest="150" HeightRequest="300"></Border>
+        <Border BackgroundColor="Blue" WidthRequest="250" HeightRequest="100"></Border>
+        <Border BackgroundColor="Yellow">
+            <VerticalStackLayout>
+                <Label Text="Hallo"></Label>
+                <Button Text="Click me!" Clicked="Button_Clicked"></Button>
+            </VerticalStackLayout>
+        </Border>
+    </FlexLayout>
+
+</ContentPage>
