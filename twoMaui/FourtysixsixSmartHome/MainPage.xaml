@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FourtysixsixSmartHome.MainPage">
+
+    <ScrollView>
+        <FlexLayout Direction="Row"
+                Wrap="Wrap"
+                AlignItems="Start"
+                Padding="10">
+
+
+            <VerticalStackLayout Padding="10">
+                <Label Text="Licht" />
+                <Switch x:Name="lSwitch" Toggled="lSwitch_Toggled"/>
+                <Label x:Name="lightStatusLabel" Text="Aus" />
+            </VerticalStackLayout>
+
+
+            <VerticalStackLayout Padding="10">
+                <Label Text="Temperatur" />
+                <Slider ValueChanged="Slider_ValueChanged_1" Maximum="40"/>
+                <Label x:Name="lTemperatur" />
+            </VerticalStackLayout>
+
+
+            <VerticalStackLayout Padding="10">
+                <Label Text="Lautstärke" />
+                <Slider ValueChanged="Slider_ValueChanged" Maximum="100" />
+                <Label x:Name="lLautstärke" />
+            </VerticalStackLayout>
+
+
+            <VerticalStackLayout Padding="10">
+                <Label Text="Sicherheit" />
+                <Button Text="Alarm aktivieren" Clicked="Button_Clicked"/>
+                <Label x:Name="Alarm" Text="Aus"></Label>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout Padding="10">
+                <Label Text="Systemstatus"  />
+                <Label x:Name="status" Text="Alles normal" />
+            </VerticalStackLayout>
+
+        </FlexLayout>
+    </ScrollView>
+
+</ContentPage>

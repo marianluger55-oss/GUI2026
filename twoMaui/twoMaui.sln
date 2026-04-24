@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FourtyFourGridLayout", "Fou
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FourtyFiveFlexLayout", "FourtyFiveFlexLayout\FourtyFiveFlexLayout.csproj", "{F1716406-0D29-492D-8639-69CEE1DE3B24}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FourtysixsixSmartHome", "FourtysixsixSmartHome\FourtysixsixSmartHome.csproj", "{390F5176-A24C-4204-83CF-FC46A60A0D11}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -77,6 +79,10 @@ Global
 		{F1716406-0D29-492D-8639-69CEE1DE3B24}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 		{F1716406-0D29-492D-8639-69CEE1DE3B24}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F1716406-0D29-492D-8639-69CEE1DE3B24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{390F5176-A24C-4204-83CF-FC46A60A0D11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{390F5176-A24C-4204-83CF-FC46A60A0D11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{390F5176-A24C-4204-83CF-FC46A60A0D11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{390F5176-A24C-4204-83CF-FC46A60A0D11}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
