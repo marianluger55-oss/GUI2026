@@ -4,11 +4,20 @@
              x:Class="FiftyNineFilePicker.MainPage">
 
     <ScrollView>
-        <Button Text="Datei auswählen" Clicked="Button_Clicked"></Button>
-        
-        <Editor
-            x:Name="editor"
-            IsReadOnly="True"/>
+        <VerticalStackLayout>
+            <HorizontalStackLayout>
+            <Button Text="Datei auswählen" Clicked="Button_Clicked"></Button>
+
+                <Button Text="Choose multiple files" Clicked="Button_Clicked_1"></Button>
+                <Button Text="Choose .cs file" Clicked="ChooseCsFileButton_Clicked"></Button>
+                <Button Text="Choose Foler" Clicked="ChooseFolderButtonClicked"></Button>
+         </HorizontalStackLayout>
+            <Editor
+            x:Name="eFileContent"
+            IsReadOnly="True"
+            HeightRequest="300"/>
+                
+        </VerticalStackLayout>
     </ScrollView>
 
 </ContentPage>
