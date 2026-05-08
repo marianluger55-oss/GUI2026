@@ -12,7 +12,11 @@
         <Border BackgroundColor="Yellow">
             <VerticalStackLayout>
                 <Label Text="Hallo"></Label>
-                <Button Text="Click me!" Clicked="Button_Clicked"></Button>
+                <Button Text="Click me!" Clicked="Button_clicked"></Button>
+                <Button Text="Speichern"
+                        Clicked="Button_Clicked_1"></Button>
+                <Button Text="Menü auswählen" Clicked="Button_Clicked_2"></Button>
+                <Label x:Name="lMenu"></Label>
             </VerticalStackLayout>
         </Border>
     </FlexLayout>
