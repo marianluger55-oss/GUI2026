@@ -35,6 +35,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "58_Path", "58_Path\58_Path.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FiftyNineFilePicker", "FiftyNineFilePicker\FiftyNineFilePicker.csproj", "{AC343D79-87FE-44F5-88F7-343B63C4D69F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HerbariumLearnApp", "HerbariumLearnApp\HerbariumLearnApp.csproj", "{1A19EA4C-3C72-4A28-B0C0-43A35F98CC0E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -92,6 +94,7 @@ Global
 		{F1716406-0D29-492D-8639-69CEE1DE3B24}.Release|Any CPU.Build.0 = Release|Any CPU
 		{390F5176-A24C-4204-83CF-FC46A60A0D11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{390F5176-A24C-4204-83CF-FC46A60A0D11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{390F5176-A24C-4204-83CF-FC46A60A0D11}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 		{390F5176-A24C-4204-83CF-FC46A60A0D11}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{390F5176-A24C-4204-83CF-FC46A60A0D11}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B1501478-84CD-4966-9C17-E0B8EC548854}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -114,6 +117,10 @@ Global
 		{AC343D79-87FE-44F5-88F7-343B63C4D69F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AC343D79-87FE-44F5-88F7-343B63C4D69F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AC343D79-87FE-44F5-88F7-343B63C4D69F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A19EA4C-3C72-4A28-B0C0-43A35F98CC0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A19EA4C-3C72-4A28-B0C0-43A35F98CC0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A19EA4C-3C72-4A28-B0C0-43A35F98CC0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A19EA4C-3C72-4A28-B0C0-43A35F98CC0E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
