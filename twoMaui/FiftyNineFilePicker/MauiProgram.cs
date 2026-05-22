@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using CommunityToolkit.Maui.Core;
+using Microsoft.Extensions.Logging;
+using Microsoft.Maui.Controls.Embedding;
 
 namespace FiftyNineFilePicker
 {
@@ -13,7 +15,7 @@ namespace FiftyNineFilePicker
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
-                });
+                }).UseMauiCommunityToolkitCore();
 
 #if DEBUG
     		builder.Logging.AddDebug();

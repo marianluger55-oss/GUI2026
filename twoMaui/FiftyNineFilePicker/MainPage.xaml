@@ -16,7 +16,6 @@
             x:Name="eFileContent"
             IsReadOnly="True"
             HeightRequest="300"/>
-                
         </VerticalStackLayout>
     </ScrollView>
 
