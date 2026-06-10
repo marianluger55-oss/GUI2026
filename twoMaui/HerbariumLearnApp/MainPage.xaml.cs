@@ -4,7 +4,7 @@ namespace HerbariumLearnApp
 {
     public partial class MainPage : ContentPage
     {
-        private string[] plantData;
+        private List<Plant> plantData;
         private int indexOfCurrentPlant;
         private string pathToPlants; 
 
@@ -62,6 +62,51 @@ namespace HerbariumLearnApp
             indexOfCurrentPlant++;
             indexOfCurrentPlant = indexOfCurrentPlant % plantData.Length; 
             LoadAndDisplayPlant();
+
+        }
+
+        private void BtnHelpGerName_Clicked(object sender, EventArgs e)
+        {
+            Plant p = plantData[indexOfCurrentPlant];
+            //schauen welcher Text bereits eingegeben wurde und diesen mit dem deutschen Namen vergleichen und den nächsten Buchstaben des deutschen Namens anzeigen
+            string currentInput = eGerName.Text;
+            string gerName = p.GerName;
+            if (currentInput.Length < gerName.Length)
+            {
+                char nextLetter = gerName[currentInput.Length];
+                eGerName.Text += nextLetter;
+            }
+
+        }
+
+        private void BtnHelpLat_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnGerFam_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnLatFam_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnCheck_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FalschMakieren_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
 
         }
     }
