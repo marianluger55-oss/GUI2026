@@ -1,100 +1,166 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="HerbariumLearnApp.MainPage"
-             Title="Herbarium Lern App">
-                
-             
+
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="HerbariumLearnApp.MainPage"
+    Title="Herbarium Lern App">
 
     <ScrollView>
-        <Grid>
+
+        <Grid Padding="15"
+              RowSpacing="10">
+
             <Grid.RowDefinitions>
-                <RowDefinition Height="100" />
+                <RowDefinition Height="Auto"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="2*" />
-                <ColumnDefinition Width="*" />
-            </Grid.ColumnDefinitions>
 
-            <Border Stroke="LightGray" StrokeThickness="3" Grid.Row="0" Grid.Column="0">
-                <HorizontalStackLayout>
-                    <Button
-                    Text="Verzeichnis auswählen:" 
-                            Clicked="Verzeichnisauswählen" 
-                            HeightRequest="20">
-                </Button>
-                    <Label
-                         x:Name="eFolderContent" HeightRequest="20"/>      
-                </HorizontalStackLayout>
+            <!-- HEADER -->
+            <Border Grid.Row="0"
+                    Stroke="#D0D0D0"
+                    StrokeShape="RoundRectangle 15"
+                    Padding="15">
+
+                <VerticalStackLayout Spacing="10">
+
+                    <Grid ColumnDefinitions="*,Auto">
+
+                        <Button Text="📁 Verzeichnis wählen"
+                                Clicked="Verzeichnisauswählen"
+                                BackgroundColor="#4CAF50"
+                                TextColor="White"
+                                CornerRadius="10"/>
+
+                        <Label Grid.Column="1"
+                               x:Name="lblProgress"
+                               Text="0 / 0"
+                               FontAttributes="Bold"
+                               VerticalOptions="Center"/>
+                    </Grid>
+
+                    <Label x:Name="eFolderContent"
+                           TextColor="Gray"
+                           FontSize="12"/>
+
+                    <ProgressBar x:Name="pbProgress"
+                                 Progress="0"/>
+
+                </VerticalStackLayout>
+
             </Border>
-            <Border Stroke="LightGray" StrokeThickness="3" Grid.Row="0" Grid.Column="1">
-                <HorizontalStackLayout VerticalOptions="Center" HorizontalOptions="Center">
-                    <Label Text="4/5"></Label>
-                </HorizontalStackLayout>
-            </Border>
-            <Border Stroke="LightGray" StrokeThickness="3" Grid.Row="1" Grid.Column="0">
-                <CarouselView x:Name="cvPlants">
-                    <CarouselView.ItemTemplate>
-                        <DataTemplate>
-                            <Image Aspect="AspectFit" Source="{Binding .}">
-                            </Image>
-                        </DataTemplate>
-                    </CarouselView.ItemTemplate>
-                </CarouselView>
-            </Border>
-            <Border Stroke="LightGray" StrokeThickness="3" Grid.Row="1" Grid.Column="1">
-                <Grid ColumnDefinitions="*,*,*,*" RowDefinitions="*,*,*,*,*,*" VerticalOptions="Center" RowSpacing="15" ColumnSpacing="15">
-                    <Label Text="Dt. Name" Grid.Row="0" Grid.Column="0"></Label>
-                    <Entry Grid.Column="1" Grid.Row="0" x:Name="eGerName">
-                    </Entry>
-                    <Button Text="H" 
-                            Clicked="BtnHelpGerName_Clicked"
-                            Grid.Column="2"
-                            Grid.Row="0">
-                    </Button>
-                    <Label Text="Lt. Name" Grid.Row="1" Grid.Column="0"></Label>
-                    <Entry Grid.Column="1" Grid.Row="1" x:Name="eLatName">
-                    </Entry>
-                    <Button Text="H" 
-                        Clicked="BtnHelpLat_Clicked"
-                            Grid.Column="2"
-                            Grid.Row="1">
-                    </Button>
-                    <Label Text="Dt. Familie" Grid.Row="2" Grid.Column="0"></Label>
-                    <Entry Grid.Column="1" Grid.Row="2" x:Name="eGerFamily">
-                    </Entry>
-                    <Button Text="H" 
-                        Clicked="BtnGerFam_Clicked"
-                            Grid.Column="2"
-                            Grid.Row="2">
-                    </Button>
-                    <Label Text="DL. Familie" Grid.Row="3" Grid.Column="0"></Label>
-                    <Entry Grid.Column="1" Grid.Row="3" x:Name="eLatFamily">
-                    </Entry>
-                    <Button Text="H" 
-                        Clicked="BtnLatFam_Clicked"
-                            Grid.Column="2"
-                            Grid.Row="3">
-                    </Button>
-                    <Button Text="Überprüfen"
-                            Clicked="BtnCheck_Clicked"
-                            Grid.ColumnSpan="2"
-                            Grid.Row="4"
-                            Grid.Column="0"></Button>
-                    <Button Text="Nächste Pflanze"
-                       Clicked="naechstepflanze"
-                            Grid.Row="4"
-                            Grid.Column="2"
-                            Grid.ColumnSpan="2">
-                    </Button>
-                    <Button Text="Richtig markieren"
-                    Grid.Row="5" Grid.Column="0" Clicked="RichtigMarkieren_Clicked" Grid.ColumnSpan="2"></Button>
-                    <Button Text="Falsch markieren"
-                    Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="2" Clicked="Button_Clicked"></Button>
-                </Grid>
-            </Border>
+
+            <!-- MAIN CONTENT -->
+            <Grid Grid.Row="1"
+                  ColumnDefinitions="2*,1*"
+                  ColumnSpacing="15">
+
+                <!-- IMAGE AREA -->
+                <Border Grid.Column="0"
+                        Stroke="#D0D0D0"
+                        StrokeShape="RoundRectangle 15"
+                        Padding="0">
+
+                    <Grid RowDefinitions="*,Auto">
+
+                        <CarouselView
+                            x:Name="cvPlants"
+                            IndicatorView="imgIndicator"
+                            HorizontalOptions="Fill"
+                            VerticalOptions="Fill">
+
+                            <CarouselView.ItemTemplate>
+                                <DataTemplate>
+
+                                    <Grid>
+
+                                        <Image
+                                            Source="{Binding .}"
+                                            Aspect="AspectFit"
+                                            HorizontalOptions="Fill"
+                                            VerticalOptions="Fill" />
+
+                                    </Grid>
+
+                                </DataTemplate>
+                            </CarouselView.ItemTemplate>
+
+                        </CarouselView>
+
+                        <IndicatorView
+                            x:Name="imgIndicator"
+                            Grid.Row="1"
+                            HorizontalOptions="Center"
+                            Margin="0,5"/>
+
+                    </Grid>
+
+                </Border>
+
+                <!-- INPUT AREA -->
+                <Border Grid.Column="1"
+                        Stroke="#D0D0D0"
+                        StrokeShape="RoundRectangle 15"
+                        Padding="15">
+
+                    <VerticalStackLayout Spacing="12">
+
+                        <Grid ColumnDefinitions="*,Auto">
+                            <Entry x:Name="eGerName" Placeholder="Deutscher Name"/>
+                            <Button Grid.Column="1" Text="💡" Clicked="BtnHelpGerName_Clicked"/>
+                        </Grid>
+
+                        <Grid ColumnDefinitions="*,Auto">
+                            <Entry x:Name="eLatName" Placeholder="Lateinischer Name"/>
+                            <Button Grid.Column="1" Text="💡" Clicked="BtnHelpLat_Clicked"/>
+                        </Grid>
+
+                        <Grid ColumnDefinitions="*,Auto">
+                            <Entry x:Name="eGerFamily" Placeholder="Deutsche Familie"/>
+                            <Button Grid.Column="1" Text="💡" Clicked="BtnGerFam_Clicked"/>
+                        </Grid>
+
+                        <Grid ColumnDefinitions="*,Auto">
+                            <Entry x:Name="eLatFamily" Placeholder="Lateinische Familie"/>
+                            <Button Grid.Column="1" Text="💡" Clicked="BtnLatFam_Clicked"/>
+                        </Grid>
+
+                        <Button Text="✔ Überprüfen"
+                                BackgroundColor="#2196F3"
+                                TextColor="White"
+                                Clicked="BtnCheck_Clicked"/>
+
+                        <Button Text="➡ Nächste Pflanze"
+                                BackgroundColor="#FF9800"
+                                TextColor="White"
+                                Clicked="naechstepflanze"/>
+
+                        <Grid ColumnDefinitions="*,*">
+
+                            <Button Text="✓ Richtig"
+                                    BackgroundColor="#4CAF50"
+                                    TextColor="White"
+                                    Clicked="RichtigMarkieren_Clicked"/>
+
+                            <Button Grid.Column="1"
+                                    Text="✗ Falsch"
+                                    BackgroundColor="#F44336"
+                                    TextColor="White"
+                                    Clicked="Button_Clicked"/>
+
+                        </Grid>
+
+                        <Label x:Name="lblCorrect" Text="✓ 0" TextColor="Green"/>
+                        <Label x:Name="lblWrong" Text="✗ 0" TextColor="Red"/>
+
+                    </VerticalStackLayout>
+
+                </Border>
+
+            </Grid>
+
         </Grid>
+
     </ScrollView>
 
 </ContentPage>
